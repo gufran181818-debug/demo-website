@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pattern Directory — SaaSInterface 2026</title>
+  <meta name="description" content="Browse verified real-world SaaS page designs, dashboards, billing modals, and settings screens in Olive & White.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Ambient Graphics -->
+  <div class="ambient-bg"></div>
+  <div class="ambient-texture-overlay"></div>
+  <div class="ambient-grid"></div>
+  <div class="ambient-orb ambient-orb-1"></div>
+  <div class="ambient-orb ambient-orb-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-custom">
+    <div class="container-fluid px-lg-5">
+      <a class="brand-logo-text" href="index.html">
+        <div class="brand-icon-box"><i class="bi bi-layers-half"></i></div>
+        <span>SaaS<span style="color: var(--olive-bright);">Interface</span></span>
+        <span class="brand-badge ms-1"><i class="bi bi-check2-circle"></i> 2026 ARCHIVE</span>
+      </a>
+
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0 ms-xl-4 gap-1">
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom active" href="categories.html">
+              <i class="bi bi-grid-3x3-gap"></i> Directory
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="tracker.html">
+              <span class="pulse-beacon me-1"></span>
+              <span>Pattern Radar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="pricing.html">
+              <i class="bi bi-tags"></i> Membership
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="about.html">
+              <i class="bi bi-journal-text"></i> About
+            </a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <div class="search-trigger-btn" role="button">
+            <i class="bi bi-search" style="color: var(--olive-bright);"></i>
+            <span>Search screens...</span>
+            <span class="kbd-badge">Ctrl K</span>
+          </div>
+          <a href="login.html" class="btn-classy-ghost">Log in</a>
+          <a href="signup.html" class="btn-classy-primary">Access Pro</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="py-5 border-bottom" style="border-color: var(--border-subtle) !important;">
+    <div class="container-fluid px-lg-5">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3">
+        <div>
+          <span class="brand-badge mb-2 d-inline-block">COMPLETE REPOSITORY</span>
+          <h1 class="text-white fw-bold display-6 mb-1">Production UI Pattern Directory</h1>
+          <p class="text-muted mb-0">Filtered by 42 screen archetypes, 18 industries, and front-end stacks.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn-classy-ghost"><i class="bi bi-sliders me-1" style="color: var(--olive-bright);"></i> Saved Presets</button>
+          <a href="signup.html" class="btn-classy-primary"><i class="bi bi-download me-1"></i> Export High-Res ZIP</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Directory Layout: Sidebar + Grid -->
+  <div class="container-fluid px-lg-5 py-4">
+    <div class="row g-4">
+      
+      <!-- Filter Sidebar -->
+      <aside class="col-12 col-lg-3 col-xl-2">
+        <div class="p-3 rounded-4" style="background: var(--bg-surface); border: 1px solid var(--border-olive); box-shadow: var(--card-shadow);">
+          
+          <h6 class="text-white fw-bold small text-uppercase mb-3" style="letter-spacing: 0.05em;">Screen Types</h6>
+          <div class="d-flex flex-column gap-1 mb-4">
+            <button class="category-pill text-start active" data-category="all"><i class="bi bi-grid-fill"></i> All (4,890)</button>
+            <button class="category-pill text-start" data-category="dashboard"><i class="bi bi-speedometer2"></i> Dashboards (1,240)</button>
+            <button class="category-pill text-start" data-category="ai"><i class="bi bi-stars"></i> AI Interfaces (890)</button>
+            <button class="category-pill text-start" data-category="billing"><i class="bi bi-credit-card"></i> Billing & Pricing (640)</button>
+            <button class="category-pill text-start" data-category="auth"><i class="bi bi-shield-lock"></i> Authentication (520)</button>
+            <button class="category-pill text-start" data-category="settings"><i class="bi bi-sliders"></i> Settings & Roles (480)</button>
+            <button class="category-pill text-start" data-category="tables"><i class="bi bi-table"></i> Tables & Grids (610)</button>
+            <button class="category-pill text-start" data-category="onboarding"><i class="bi bi-door-open"></i> Empty States (510)</button>
+          </div>
+
+          <h6 class="text-white fw-bold small text-uppercase mb-3" style="letter-spacing: 0.05em;">Industry</h6>
+          <div class="d-flex flex-column gap-2 mb-4 text-muted small">
+            <div class="form-check">
+              <input class="form-check-input bg-dark border-secondary" type="checkbox" id="indDevTools" checked style="border-color: var(--border-olive) !important;">
+              <label class="form-check-label text-white-50" for="indDevTools">Developer Tools</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input bg-dark border-secondary" type="checkbox" id="indFintech" checked style="border-color: var(--border-olive) !important;">
+              <label class="form-check-label text-white-50" for="indFintech">Fintech & Payments</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input bg-dark border-secondary" type="checkbox" id="indAI" checked style="border-color: var(--border-olive) !important;">
+              <label class="form-check-label text-white-50" for="indAI">AI Infrastructure</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input bg-dark border-secondary" type="checkbox" id="indProductivity" style="border-color: var(--border-olive) !important;">
+              <label class="form-check-label text-white-50" for="indProductivity">Productivity / Docs</label>
+            </div>
+          </div>
+
+          <h6 class="text-white fw-bold small text-uppercase mb-3" style="letter-spacing: 0.05em;">Color Tone</h6>
+          <div class="d-flex gap-2">
+            <span class="rounded-circle p-2 border" style="background: #0a0f0b; width: 26px; height: 26px; cursor: pointer; border-color: var(--border-olive) !important;" title="Obsidian Forest"></span>
+            <span class="rounded-circle p-2 border" style="background: #8dbb72; width: 26px; height: 26px; cursor: pointer; border-color: #8dbb72 !important;" title="Sage Olive"></span>
+            <span class="rounded-circle p-2 border" style="background: #1e1b4b; width: 26px; height: 26px; cursor: pointer; border-color: rgba(255,255,255,0.2) !important;" title="Indigo Midnight"></span>
+            <span class="rounded-circle p-2 border" style="background: #ffffff; width: 26px; height: 26px; cursor: pointer; border-color: #ffffff !important;" title="Crisp White"></span>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- Grid Content -->
+      <main class="col-12 col-lg-9 col-xl-10">
+        <div class="row g-4" id="categoriesGrid">
+          
+          <!-- Screen Item 1 -->
+          <div class="col-12 col-md-6 col-xl-4 saas-card-col" data-category="dashboard">
+            <div class="saas-card">
+              <div class="saas-thumb-wrapper">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Cloud Cluster Telemetry" class="saas-thumb">
+                <div class="saas-thumb-overlay">
+                  <span class="badge border text-white" style="background: rgba(10,15,11,0.85); border-color: var(--border-olive) !important;">Datadog Core</span>
+                  <button class="btn btn-sm btn-light fw-semibold btn-view-preview"><i class="bi bi-zoom-in"></i> Inspect</button>
+                </div>
+              </div>
+              <div class="saas-card-body">
+                <div class="saas-brand-header">
+                  <h5 class="saas-app-name">Kubernetes Fleet Telemetry</h5>
+                  <span class="saas-tag">Dashboard</span>
+                </div>
+                <p class="saas-caption">Live node health status, CPU thermal throttling alerts, and pod restart frequency metrics.</p>
+                <div class="saas-meta-footer">
+                  <span>DevTools • Production</span>
+                  <button class="btn btn-sm btn-link text-dim p-0 btn-bookmark"><i class="bi bi-bookmark fs-6"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen Item 2 -->
+          <div class="col-12 col-md-6 col-xl-4 saas-card-col" data-category="ai">
+            <div class="saas-card">
+              <div class="saas-thumb-wrapper">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="Agent Branching" class="saas-thumb">
+                <div class="saas-thumb-overlay">
+                  <span class="badge border text-white" style="background: rgba(10,15,11,0.85); border-color: var(--border-olive) !important;">LangGraph UI</span>
+                  <button class="btn btn-sm btn-light fw-semibold btn-view-preview"><i class="bi bi-zoom-in"></i> Inspect</button>
+                </div>
+              </div>
+              <div class="saas-card-body">
+                <div class="saas-brand-header">
+                  <h5 class="saas-app-name">Agent Dynamic Flow</h5>
+                  <span class="saas-tag">AI Interfaces</span>
+                </div>
+                <p class="saas-caption">Visual loop evaluation, token latency heatmaps, and fallback retry state triggers.</p>
+                <div class="saas-meta-footer">
+                  <span>AI Infra • React Flow</span>
+                  <button class="btn btn-sm btn-link text-dim p-0 btn-bookmark"><i class="bi bi-bookmark fs-6"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen Item 3 -->
+          <div class="col-12 col-md-6 col-xl-4 saas-card-col" data-category="billing">
+            <div class="saas-card">
+              <div class="saas-thumb-wrapper">
+                <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80" alt="Seat Billing Modal" class="saas-thumb">
+                <div class="saas-thumb-overlay">
+                  <span class="badge border text-white" style="background: rgba(10,15,11,0.85); border-color: var(--border-olive) !important;">Figma Billing</span>
+                  <button class="btn btn-sm btn-light fw-semibold btn-view-preview"><i class="bi bi-zoom-in"></i> Inspect</button>
+                </div>
+              </div>
+              <div class="saas-card-body">
+                <div class="saas-brand-header">
+                  <h5 class="saas-app-name">Annual Seat Add-on</h5>
+                  <span class="saas-tag">Billing</span>
+                </div>
+                <p class="saas-caption">Mid-cycle seat prorations, tax breakdown tooltip, and instant invoice download button.</p>
+                <div class="saas-meta-footer">
+                  <span>Fintech • B2B</span>
+                  <button class="btn btn-sm btn-link text-dim p-0 btn-bookmark"><i class="bi bi-bookmark fs-6"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen Item 4 -->
+          <div class="col-12 col-md-6 col-xl-4 saas-card-col" data-category="auth">
+            <div class="saas-card">
+              <div class="saas-thumb-wrapper">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80" alt="Biometric SSO" class="saas-thumb">
+                <div class="saas-thumb-overlay">
+                  <span class="badge border text-white" style="background: rgba(10,15,11,0.85); border-color: var(--border-olive) !important;">Okta FastPass</span>
+                  <button class="btn btn-sm btn-light fw-semibold btn-view-preview"><i class="bi bi-zoom-in"></i> Inspect</button>
+                </div>
+              </div>
+              <div class="saas-card-body">
+                <div class="saas-brand-header">
+                  <h5 class="saas-app-name">Enterprise Zero-Trust Auth</h5>
+                  <span class="saas-tag">Authentication</span>
+                </div>
+                <p class="saas-caption">Cross-device Bluetooth proximity pairing and biometric verification fallback.</p>
+                <div class="saas-meta-footer">
+                  <span>Security • WebAuthn</span>
+                  <button class="btn btn-sm btn-link text-dim p-0 btn-bookmark"><i class="bi bi-bookmark fs-6"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen Item 5 -->
+          <div class="col-12 col-md-6 col-xl-4 saas-card-col" data-category="settings">
+            <div class="saas-card">
+              <div class="saas-thumb-wrapper">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="API Scopes" class="saas-thumb">
+                <div class="saas-thumb-overlay">
+                  <span class="badge border text-white" style="background: rgba(10,15,11,0.85); border-color: var(--border-olive) !important;">GitHub Tokens</span>
+                  <button class="btn btn-sm btn-light fw-semibold btn-view-preview"><i class="bi bi-zoom-in"></i> Inspect</button>
+                </div>
+              </div>
+              <div class="saas-card-body">
+                <div class="saas-brand-header">
+                  <h5 class="saas-app-name">Fine-Grained Scopes</h5>
+                  <span class="saas-tag">Settings</span>
+                </div>
+                <p class="saas-caption">Expiration policies, IP CIDR whitelisting, and read/write permission selectors.</p>
+                <div class="saas-meta-footer">
+                  <span>Security • Admin</span>
+                  <button class="btn btn-sm btn-link text-dim p-0 btn-bookmark"><i class="bi bi-bookmark fs-6"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen Item 6 -->
+          <div class="col-12 col-md-6 col-xl-4 saas-card-col" data-category="tables">
+            <div class="saas-card">
+              <div class="saas-thumb-wrapper">
+                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80" alt="Ledger Table" class="saas-thumb">
+                <div class="saas-thumb-overlay">
+                  <span class="badge border text-white" style="background: rgba(10,15,11,0.85); border-color: var(--border-olive) !important;">Mercury Bank</span>
+                  <button class="btn btn-sm btn-light fw-semibold btn-view-preview"><i class="bi bi-zoom-in"></i> Inspect</button>
+                </div>
+              </div>
+              <div class="saas-card-body">
+                <div class="saas-brand-header">
+                  <h5 class="saas-app-name">Treasury Ledger</h5>
+                  <span class="saas-tag">Tables & Grids</span>
+                </div>
+                <p class="saas-caption">Split-second filtering across 50,000 ACH transfers with inline receipt preview drawers.</p>
+                <div class="saas-meta-footer">
+                  <span>Fintech • High Density</span>
+                  <button class="btn btn-sm btn-link text-dim p-0 btn-bookmark"><i class="bi bi-bookmark fs-6"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Preview Modal -->
+  <div class="modal fade modal-custom-dark" id="previewModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold text-white" id="modalPreviewTitle">Interface Preview</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <img src="" id="modalPreviewImg" class="img-fluid rounded-3 mb-3 border shadow-lg" style="max-height: 70vh; width: 100%; object-fit: cover; border-color: var(--border-olive) !important;">
+          <p class="text-muted text-start" id="modalPreviewDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Command Palette Modal -->
+  <div class="modal fade modal-custom-dark" id="cmdModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content p-3">
+        <div class="d-flex align-items-center border-bottom pb-2 mb-3" style="border-color: var(--border-olive) !important;">
+          <i class="bi bi-search text-muted fs-5 me-2" style="color: var(--olive-bright) !important;"></i>
+          <input type="text" class="cmd-input" id="cmdSearchInput" placeholder="Filter by SaaS name, pattern, or tag...">
+          <span class="kbd-badge ms-auto">ESC</span>
+        </div>
+        <div class="d-flex flex-column gap-1">
+          <a href="categories.html?type=dashboard" class="cmd-item text-decoration-none">
+            <span class="text-white">Dashboards (Telemetry, Graphs)</span>
+            <span class="badge border" style="background: rgba(141,187,114,0.1); color: var(--olive-bright); border-color: var(--border-olive);">1,240 items</span>
+          </a>
+          <a href="categories.html?type=ai" class="cmd-item text-decoration-none">
+            <span class="text-white">AI Agent Interfaces</span>
+            <span class="badge border" style="background: rgba(141,187,114,0.1); color: var(--olive-bright); border-color: var(--border-olive);">890 items</span>
+          </a>
+          <a href="tracker.html" class="cmd-item text-decoration-none">
+            <span class="text-white">Trend Radar 2026</span>
+            <span class="badge border" style="background: rgba(141,187,114,0.1); color: var(--olive-bright); border-color: var(--border-olive);">Live</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-custom mt-5">
+    <div class="container text-center text-muted small">
+      <p>© 2026 SaaSInterface Directory • Benchmarked against production systems in Olive & White.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

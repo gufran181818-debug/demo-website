@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membership & Plans — SaaSInterface 2026</title>
+  <meta name="description" content="Unlock unrestricted high-resolution production UI screen recordings, design tokens, and Figma export assets in Olive & White.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Ambient Graphics -->
+  <div class="ambient-bg"></div>
+  <div class="ambient-texture-overlay"></div>
+  <div class="ambient-grid"></div>
+  <div class="ambient-orb ambient-orb-1"></div>
+  <div class="ambient-orb ambient-orb-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xl navbar-custom">
+    <div class="container-fluid px-lg-5">
+      <a class="brand-logo-text" href="index.html">
+        <div class="brand-icon-box"><i class="bi bi-layers-half"></i></div>
+        <span>SaaS<span style="color: var(--olive-bright);">Interface</span></span>
+        <span class="brand-badge ms-1"><i class="bi bi-check2-circle"></i> 2026 ARCHIVE</span>
+      </a>
+
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0 ms-xl-4 gap-1">
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="categories.html">
+              <i class="bi bi-grid-3x3-gap"></i> Directory
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="tracker.html">
+              <span class="pulse-beacon me-1"></span>
+              <span>Pattern Radar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom active" href="pricing.html">
+              <i class="bi bi-tags"></i> Membership
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="about.html">
+              <i class="bi bi-journal-text"></i> About
+            </a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="login.html" class="btn-classy-ghost">Log in</a>
+          <a href="signup.html" class="btn-classy-primary">Access Pro</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Pricing Header & Toggle -->
+  <header class="py-5 text-center">
+    <div class="container px-4">
+      <div class="hero-pill mb-3">
+        <span class="badge px-2 py-1 rounded-pill me-1" style="background: var(--olive-bright); color: #0a0f0b; font-weight: 700;">TRANSPARENT VALUE</span>
+        <span>Cancel Anytime • 14-Day Full Refund Guarantee</span>
+      </div>
+      <h1 class="hero-title mb-3">Simple, Transparent Membership</h1>
+      <p class="hero-subtitle">
+        Everything you need to benchmark, dissect, and build software interfaces that convert.
+      </p>
+
+      <!-- Billing Toggle Switch -->
+      <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+        <span class="text-white-50 fw-semibold small">Monthly</span>
+        <div class="form-check form-switch m-0">
+          <input class="form-check-input" type="checkbox" id="billingToggle" checked style="width: 3.2em; height: 1.6em; cursor: pointer; background-color: var(--olive-deep); border-color: var(--border-olive);">
+        </div>
+        <span class="text-white fw-semibold small">
+          Annual <span class="badge border ms-1" style="background: rgba(141,187,114,0.15); color: var(--olive-bright); border-color: var(--border-olive);">Save 20%</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Pricing Cards -->
+  <div class="container px-4 pb-5">
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Free Explorer Tier -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="pricing-card">
+          <div class="mb-3">
+            <h5 class="text-white fw-bold mb-1">Explorer</h5>
+            <p class="text-muted small">For students and curious designers checking basic flows.</p>
+          </div>
+          <div class="d-flex align-items-baseline mb-4">
+            <span class="pricing-price">$0</span>
+            <span class="pricing-period ms-2">/ forever</span>
+          </div>
+
+          <a href="signup.html" class="btn-classy-ghost w-100 justify-content-center py-2 mb-3">
+            Start Free
+          </a>
+
+          <ul class="pricing-list">
+            <li><i class="bi bi-check-circle-fill"></i> Browse 150+ sample screens</li>
+            <li><i class="bi bi-check-circle-fill"></i> Basic keyword search</li>
+            <li><i class="bi bi-check-circle-fill"></i> Standard resolution previews</li>
+            <li class="text-dim"><i class="bi bi-x-circle text-dim"></i> No Figma token export</li>
+            <li class="text-dim"><i class="bi bi-x-circle text-dim"></i> No flow video recordings</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pro Member Tier (Featured) -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="pricing-card featured">
+          <div class="pricing-featured-badge">Most Popular</div>
+          <div class="mb-3">
+            <h5 class="text-white fw-bold mb-1">Designer Pro</h5>
+            <p class="text-muted small">For solo founders, staff designers, and frontend leads.</p>
+          </div>
+          <div class="d-flex align-items-baseline mb-4">
+            <span class="pricing-price" id="proPrice">$19</span>
+            <span class="pricing-period ms-2">/ month billed annually</span>
+          </div>
+
+          <a href="signup.html" class="btn-classy-primary w-100 justify-content-center py-2 mb-3">
+            Unlock Pro Access
+          </a>
+
+          <ul class="pricing-list">
+            <li><i class="bi bi-check-circle-fill" style="color: var(--olive-bright);"></i> Full access to 4,890+ verified screens</li>
+            <li><i class="bi bi-check-circle-fill" style="color: var(--olive-bright);"></i> Ultra-HD 4K screenshots & mobile flows</li>
+            <li><i class="bi bi-check-circle-fill" style="color: var(--olive-bright);"></i> CSS Design token & hex export</li>
+            <li><i class="bi bi-check-circle-fill" style="color: var(--olive-bright);"></i> 1-click Figma file import</li>
+            <li><i class="bi bi-check-circle-fill" style="color: var(--olive-bright);"></i> Unlimited bookmark boards</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Studio & Agency Tier -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="pricing-card">
+          <div class="mb-3">
+            <h5 class="text-white fw-bold mb-1">Studio & Scale</h5>
+            <p class="text-muted small">For product teams and digital agencies building at scale.</p>
+          </div>
+          <div class="d-flex align-items-baseline mb-4">
+            <span class="pricing-price" id="teamPrice">$49</span>
+            <span class="pricing-period ms-2">/ month billed annually</span>
+          </div>
+
+          <a href="signup.html" class="btn-classy-ghost w-100 justify-content-center py-2 mb-3">
+            Invite Team (Up to 10)
+          </a>
+
+          <ul class="pricing-list">
+            <li><i class="bi bi-check-circle-fill"></i> Everything in Designer Pro</li>
+            <li><i class="bi bi-check-circle-fill"></i> 10 Shared team workspace seats</li>
+            <li><i class="bi bi-check-circle-fill"></i> Dedicated weekly custom screen requests</li>
+            <li><i class="bi bi-check-circle-fill"></i> REST API access to metadata archive</li>
+            <li><i class="bi bi-check-circle-fill"></i> Priority concierge support</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="mt-5 pt-4" style="max-width: 800px; margin: 0 auto;">
+      <h3 class="text-white fw-bold text-center mb-4">Frequently Asked Questions</h3>
+      
+      <div class="accordion accordion-flush" id="pricingFAQ">
+        
+        <div class="accordion-item bg-transparent border-bottom" style="border-color: var(--border-subtle) !important;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              How often is new SaaS UI data added to the archive?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+            <div class="accordion-body text-muted small">
+              Our editorial and design team audits, verifies, and publishes 150 to 250 fresh production screens every Thursday, keeping the directory ahead of emerging industry standards.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-transparent border-bottom" style="border-color: var(--border-subtle) !important;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Are these screenshots created in Figma or live production code?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+            <div class="accordion-body text-muted small">
+              100% of our screens are inspected and captured directly from live, operational SaaS applications behind real subscription plans and active corporate accounts. We never feature concept art.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-transparent border-bottom" style="border-color: var(--border-subtle) !important;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Can I cancel my subscription at any time?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+            <div class="accordion-body text-muted small">
+              Yes, you can cancel in one click from your account dashboard. You will retain full access until the end of your billing cycle with zero penalty fees.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container text-center text-muted small">
+      <p>© 2026 SaaSInterface Membership • Built for elite digital product teams in Olive & White.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+/* ==========================================================================
+   SaaSInterface 2026 - Human-Centric, Warm & Interactive Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Warm, Classy Color Palette */
+    --bg-base: #0c0a09;
+    /* Very dark warm gray/brown */
+    --bg-surface: rgba(28, 25, 23, 0.6);
+    /* Translucent warm surface */
+    --bg-surface-hover: rgba(41, 37, 36, 0.8);
+
+    --text-main: #fdfbf7;
+    /* Soft off-white */
+    --text-muted: #a8a29e;
+    /* Warm gray */
+    --text-dim: #78716c;
+
+    /* Brand Accents - Orange, Yellow Glow, Bright Red */
+    --brand-orange: #f97316;
+    --brand-yellow: #fbbf24;
+    --brand-red: #ef4444;
+    --glow-primary: rgba(249, 115, 22, 0.4);
+    --glow-secondary: rgba(251, 191, 36, 0.3);
+
+    /* Borders & Shadows */
+    --border-subtle: rgba(253, 251, 247, 0.08);
+    --border-medium: rgba(253, 251, 247, 0.15);
+    --card-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    --glow-shadow: 0 0 20px var(--glow-primary);
+
+    /* Animations */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ==========================================================================
+   Base & Typography
+   ========================================================================== */
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Ambient Backgrounds (Classy Glows)
+   ========================================================================== */
+.ambient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background: radial-gradient(circle at 15% 50%, var(--glow-primary), transparent 40%),
+        radial-gradient(circle at 85% 30%, var(--glow-secondary), transparent 45%);
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: breathe 12s ease-in-out infinite alternate;
+}
+
+.ambient-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image:
+        linear-gradient(var(--border-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+    opacity: 0.3;
+}
+
+/* ==========================================================================
+   Navigation (Glassmorphism)
+   ========================================================================== */
+.navbar-custom {
+    background: rgba(12, 10, 9, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding var(--transition-smooth);
+}
+
+.brand-logo-text {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: transform var(--transition-bounce);
+}
+
+.brand-logo-text:hover {
+    transform: scale(1.02);
+}
+
+.brand-icon-box {
+    background: linear-gradient(135deg, var(--brand-orange), var(--brand-red));
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.brand-badge {
+    font-size: 0.65rem;
+    background: var(--bg-surface-hover);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-subtle);
+    color: var(--brand-yellow);
+}
+
+.nav-link-custom {
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+}
+
+.nav-link-custom i {
+    transition: transform var(--transition-bounce);
+}
+
+.nav-link-custom:hover {
+    color: var(--text-main);
+    background: var(--bg-surface);
+}
+
+.nav-link-custom:hover i {
+    transform: translateY(-2px) scale(1.1);
+    color: var(--brand-orange) !important;
+}
+
+/* ==========================================================================
+   Interactive Icons Globally
+   ========================================================================== */
+i.bi {
+    transition: transform var(--transition-bounce), color var(--transition-fast);
+    display: inline-block;
+}
+
+a:hover>i.bi,
+button:hover>i.bi,
+.saas-card:hover i.bi-zoom-in {
+    transform: scale(1.15);
+}
+
+/* ==========================================================================
+   Buttons & Inputs
+   ========================================================================== */
+.btn-classy-primary {
+    background: linear-gradient(135deg, var(--brand-orange), var(--brand-red));
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    transition: all var(--transition-bounce);
+}
+
+.btn-classy-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.5);
+    color: #fff;
+}
+
+.btn-classy-ghost {
+    background: var(--bg-surface);
+    color: var(--text-main);
+    border: 1px solid var(--border-medium);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-bounce);
+}
+
+.btn-classy-ghost:hover {
+    background: var(--bg-surface-hover);
+    transform: translateY(-2px);
+    border-color: var(--brand-yellow);
+    color: var(--text-main);
+}
+
+/* Search Trigger */
+.search-trigger-btn {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    transition: all var(--transition-fast);
+}
+
+.search-trigger-btn:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--brand-orange);
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.kbd-badge {
+    background: var(--bg-base);
+    border: 1px solid var(--border-subtle);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-family: monospace;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-wrapper {
+    padding: 6rem 0 4rem;
+    animation: slideDownFade 0.8s ease-out;
+}
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    transition: transform var(--transition-bounce), border-color var(--transition-fast);
+}
+
+.hero-pill:hover {
+    transform: translateY(-2px);
+    border-color: var(--brand-orange);
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-title-highlight {
+    background: linear-gradient(135deg, var(--text-main), var(--brand-yellow), var(--brand-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+}
+
+.metric-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   Filter Bar & Category Pills
+   ========================================================================== */
+.filter-bar-wrapper {
+    background: var(--bg-surface);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.category-pill {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all var(--transition-smooth);
+}
+
+.category-pill:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.category-pill.active {
+    background: var(--bg-surface-hover);
+    border-color: var(--border-medium);
+    color: var(--brand-yellow);
+}
+
+/* ==========================================================================
+   Cards (SaaS Directory & Bento)
+   ========================================================================== */
+.saas-card-col {
+    animation: fadeUp 0.6s backwards;
+}
+
+.saas-card-col:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.saas-card-col:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.saas-card-col:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.saas-card-col:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.saas-card-col:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.saas-card-col:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.saas-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all var(--transition-smooth);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.saas-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(249, 115, 22, 0.4);
+    box-shadow: var(--card-shadow), 0 10px 30px rgba(249, 115, 22, 0.15);
+}
+
+.saas-thumb-wrapper {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+}
+
+.saas-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.saas-card:hover .saas-thumb {
+    transform: scale(1.05);
+}
+
+.saas-thumb-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(12, 10, 9, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.saas-card:hover .saas-thumb-overlay {
+    opacity: 1;
+}
+
+.saas-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.saas-brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.saas-app-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.saas-tag {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    color: var(--text-muted);
+}
+
+.saas-caption {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.saas-meta-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 1rem;
+}
+
+.btn-bookmark:hover i {
+    color: var(--brand-red);
+}
+
+/* Bento Cards */
+.bento-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-medium);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: all var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.bento-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, -20%), rgba(251, 191, 36, 0.08), transparent 40%);
+    pointer-events: none;
+    transition: background 0.3s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(251, 191, 36, 0.4);
+}
+
+.bento-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--bg-surface-hover), var(--bg-base));
+    border: 1px solid var(--brand-orange);
+    color: var(--brand-yellow);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+}
+
+/* ==========================================================================
+   Modals
+   ========================================================================== */
+.modal-custom-dark .modal-content {
+    background: var(--bg-base);
+    border: 1px solid var(--border-medium);
+    border-radius: 20px;
+    box-shadow: var(--glow-shadow);
+}
+
+.modal-custom-dark .modal-header,
+.modal-custom-dark .modal-footer {
+    border-color: var(--border-subtle);
+}
+
+.cmd-input {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.cmd-input:focus {
+    outline: none;
+}
+
+.cmd-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+}
+
+.cmd-item:hover {
+    background: var(--bg-surface);
+    color: var(--text-main);
+    padding-left: 1.2rem;
+    /* Slide effect */
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.05) translate(2%, 2%);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
